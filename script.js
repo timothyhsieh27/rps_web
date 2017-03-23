@@ -21,6 +21,7 @@ $(document).ready(function(){
   function state_human_choice(human_choice){
     let human_choice_statement = 'You selected ' + human_choice + '.'
     console.log(human_choice_statement)
+    $('.results').empty().append(human_choice_statement)
   }
 
   function generate_computer_selection(human_choice){
@@ -29,21 +30,22 @@ $(document).ready(function(){
     let computer_selection_statement =('The computer selected ' + choices[computer_choice] + '.')
     let computer_selection = choices[computer_choice]
     console.log(computer_selection_statement)
+    $('.results').append(computer_selection_statement)
     calculate_win(human_choice, choices, computer_choice)
   };
 
   function calculate_win(human_choice, choices, computer_choice){
     if (human_choice == choices[computer_choice - 1]){
       console.log('The computer won this round.')
-      $('.results').empty().append("The computer won this round.")
+      $('.results').append("The computer won this round.")
     }
     else if (human_choice == choices[computer_choice]){
       console.log('This round is a draw.')
-      $('.results').empty().append("This round is a draw.")
+      $('.results').append("This round is a draw.")
     }
     else {
       console.log('You won this round!')
-      $('.results').empty().append("You won this round!")
+      $('.results').append("You won this round!")
     }
   }
 
