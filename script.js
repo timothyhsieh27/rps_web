@@ -35,12 +35,15 @@ $(document).ready(function(){
   function calculate_win(human_choice, choices, computer_choice){
     if (human_choice == choices[computer_choice - 1]){
       console.log('The computer won this round.')
+      $('.results').empty().append("The computer won this round.")
     }
     else if (human_choice == choices[computer_choice]){
       console.log('This round is a draw.')
+      $('.results').empty().append("This round is a draw.")
     }
     else {
       console.log('You won this round!')
+      $('.results').empty().append("You won this round!")
     }
   }
 
