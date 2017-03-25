@@ -55,7 +55,7 @@ $(document).ready(function(){
 
   function check_game_over(draws, wins, losses){
     if (draws + wins + losses == 5) {
-      $('.results').append("Game Over!")
+      $('.results').append(" Game Over!")
     }
     else {
       $('.results').append(" Select a choice to play another round.")
