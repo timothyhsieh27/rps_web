@@ -5,12 +5,25 @@
   text-align: center;
 }
 
-.button-row {
-  display: inline-block;
-  width: 150px;
-  height: 75px;
-  margin: 10px;
+.choices {
+  width: 100%;
+}
+
+.button-box{
+  width: 30%;
+  height: 2%;
   border: 3px solid #73AD21;
+  display: inline-block;
+  vertical-align:middle;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.rock, .paper, .scissors {
+  position: relative;
+  height:55%;
+  width: 55%;
+  padding-left: 23%;
 }
 
 .results-banner {
